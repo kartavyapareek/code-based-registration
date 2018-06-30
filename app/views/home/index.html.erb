@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row" style="padding-top: 60px;padding-bottom: 100px;">
+
+    <h2 class="text-center">Home Page</h2>
+
+    <div class="col-md-4 col-md-offset-4 text-center">
+      <%= link_to destroy_user_session_path, :method => :delete do %>Logout<% end %><br><br>
+      <%= link_to 'Secret Codes List', secret_codes_path %>
+    </div>
+  </div>
+</div>
+
+

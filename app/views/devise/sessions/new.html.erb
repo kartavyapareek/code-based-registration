@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row" style="padding-top: 60px;padding-bottom: 100px;">
+    <h2 class="text-center">Log In</h2>
+
+    <div class="col-md-4 col-md-offset-4">
+
+      <%= form_for resource, as: resource_name, url: session_path(resource_name), html: { name: "devise-form" } do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="form-group">
+
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, :class => "form-control", :required => true, placeholder: "Your Email ID"%>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off", :class => "form-control", :required => true, placeholder: "Your Login Password" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Log In", :class => "btn btn-success btn-block" %>
+        </div>
+      <% end %>      
+     <hr>
+      <div class="text-center">
+        <%= render "devise/shared/links" %>
+      </div>
+
+    </div>
+  </div>
+</div>

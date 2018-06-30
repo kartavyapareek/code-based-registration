@@ -1,0 +1,11 @@
+<div class="col-md-4 col-md-offset-4">
+  <%= form_with model: @secret_code, local: true do |f| %>
+    <div class="form-group">
+      <%= f.label :select_quantity %><br>
+      <%= f.select :selected_number_code, ['10','20','30','40','50'], class: "dropdown-menu", required: true%>
+    </div>
+    <div class="actions">
+      <%= f.submit "Send me reset password instructions", class: "btn btn-success btn-block" %>
+    </div>
+  <% end %>
+</div>

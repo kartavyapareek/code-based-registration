@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row" style="padding-top: 60px;padding-bottom: 100px;">
+    <h2 class="text-center">Create Secret Code</h2>
+    <%= render 'create_form' %>
+  </div>
+  <div class="row">
+    <h2 class="text-center">List Secret Codes</h2>
+    <table class="table table-bordered">
+      <tr>
+        <th>Secret Code</th>
+        <th>Associate Email</th>
+        <th>Associate User</th>
+      </tr>
+      <% @codes.each do |code| %>
+        <tr>
+          <td><%= code.code %></td>
+          <td><%= code.email %></td>
+          <% if code.user.present? %>
+          <td><%= code.user.id %><br><%= code.user.first_name %></td>
+          <% else %>
+          <td></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
